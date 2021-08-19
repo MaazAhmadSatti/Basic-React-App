@@ -30,7 +30,6 @@ jobs:
         with:
           node-version: 12
           
-      # Install npm packages
       - name: Install packages
         run: npm install
 
