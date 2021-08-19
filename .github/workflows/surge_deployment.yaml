@@ -33,15 +33,12 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
         with: 
           cmd:  install # will run 'install yarn' command
-          
-      - name:  Add Web Vitals
-        run:  yarn add web-vitals
         
       - name: Build React App
-        run:  yarn build
+        run: yarn build
         
       - name: Install Surge
-        run:  npm install --global surge
+        run: npm install --global surge
         
       - name: deploy to surge
-        run:  surge ./build Basic-React-App001.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build Basic-React-App001.surge.sh --token ${{ secrets.SURGE_TOKEN }}
